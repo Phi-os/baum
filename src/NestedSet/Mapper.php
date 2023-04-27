@@ -72,10 +72,6 @@ class Mapper
 
         $result = $this->mapTreeRecursive($tree, $this->node->getKey(), $affectedKeys);
 
-        if ($result && count($affectedKeys) > 0) {
-            $this->deleteUnaffected($affectedKeys);
-        }
-
         return $result;
     }
 
